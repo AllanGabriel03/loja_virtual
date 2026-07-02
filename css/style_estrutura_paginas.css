@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+:root{
+    --cor_principal: #2063df;
+    --cor_botao01: #c95959;
+    --cor_lnk_menu: #020202;
+    --cor_vermelha: #d83b3b;
+}
+
+#geral{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cabecalho{
+    width: 100%;
+    height: 200px;
+    background-color: var(--cor_principal);
+    padding: 5px;
+    margin:20px 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#logo img{
+    width: 250px;
+    height: 150px;
+}
+
+#menu{
+    background-color: #e6d92c;
+    width: 600px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cabecalho ul{
+    display: flex;
+    list-style: none;
+    gap: 200px;
+}
+
+#div-icones img{
+    width: 70px;
+    height: 60px;
+}
+
+#menu a:link{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu);
+}
+
+#menu a:visited{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu);
+}
+
+#menu a:hover{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_botao01);
+}
+
+#menu a:active{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_vermelha);
+}
+
+#pesquisa{
+    width: 1000px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pesquisa input{
+    width: 6%;
+    height: 80px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2em;
+}
