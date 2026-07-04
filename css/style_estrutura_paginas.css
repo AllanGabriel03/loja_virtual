@@ -9,12 +9,12 @@
 }
 
 :root{
-    --cor_principal: #2063df;
+    --cor_principal: #000000;
     --cor_botao01: #c95959;
     --cor_lnk_menu: #e5eaf3;
     --cor_vermelha: #d83b3b;
-    --cor_suave: #73eaee;
-    --cor_secundaria: #0eaddd;
+    --cor_suave: #adadad;
+    --cor_secundaria: #00ADEE;
 }
 
 #geral{

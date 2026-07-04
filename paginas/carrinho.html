@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+
+    <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+    <link rel="stylesheet" href="../css/style_formulario.css">
+    <link rel="stylesheet" href="../css/style_carrinho.css">
+    <link rel="shortcut icon" href="../imagens/icones/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main id="geral">
+        <header id="cabecalho">
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="../imagens/icones/logo.png" alt="logo">
+                </a>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html" class="lnk_menu"> Home </a></li>
+                    <li><a href="../paginas/cadastro.html" class="lnk_menu"> Cadastro </a></li>
+                    <li><a href="../paginas/sobre.html" class="lnk_menu"> Sobre </a></li>
+                </ul>
+            </nav>
+
+            <div id="div-icones">
+                <ul>
+                    <li><a href="..//paginas/login.html" class="lnk_icone"><img src="../imagens/icones/login.png" alt="">Login</a></li>
+                    <li><a href="..//paginas/carrinho.html" class="lnk_icone"><img src="../imagens/icones/carrinho.png" alt="">Carrinho</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section id="pesquisa">
+            <h3>Carrinho</h3>
+        </section>
+
+        <section id="cards">
+
+            <div class="card">
+                <img src="../imagens/adidas2.webp" alt="adidas2" class="img_card">
+
+                <h2 class="tito_card">adidas2</h2>
+
+                <h3 class="valor_card">
+                    R$100.000
+                </h3>
+
+                <button class="btn_card">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="../imagens/Balenciaga mendigo.jfif" alt="balenciaga" class="img_card">
+
+                <h2 class="tito_card">Balenciaga Mendigo</h2>
+
+                <h3 class="valor_card">
+                    R$500.000
+                </h3>
+
+                <button class="btn_card">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="../imagens/Converse.jpg" alt="converse" class="img_card">
+
+                <h2 class="tito_card">Converse</h2>
+
+                <h3 class="valor_card">
+                    R$200
+                </h3>
+                <button class="btn_card">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="../imagens/crocs.webp" alt="crocs" class="img_card">
+
+                <h2 class="tito_card">Crocs</h2>
+
+                <h3 class="valor_card">
+                    R$10
+                </h3>
+
+                <button class="btn_card">Adicionar</button>
+            </div>
+        </section>     
+        
+        <section id="formulario">
+
+            <form id="form_carrinho">
+                 
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep" class="input02" maxlength="9" placeholder="Digite seu CEP">
+                
+                <label for="valor">Valor dos produtos</label>
+                <h2>R$200000</h2>
+
+                <label for="frete">Valor do frete</label>
+                <h2>R$50</h2>
+
+                <label for="valorTotal">Valor Total</label>
+                <h2>R$200050</h2>
+
+                <button type="menu">Continuar compra</button>
+                <button type="submit">Finalizar comprar</button>
+
+                <h3></h3>
+            </form>
+        </section>
+
+        <footer id="rodape">
+            <div id="dadosLoja">
+                <h2>Rua 10</h2>
+                <h1>Aracaju</h1>
+            </div>
+            
+            <div id="icones-sociais">
+                <ul>
+                    <li><a href="https://www.instagram.com"></a><img src="../imagens/icones/instagram.png" 
+                        alt="ícone instagram"></li>
+                </ul>
+            </div>
+
+            <div id="div-cartoes">
+                <img src="../imagens/icones/hipercard.png" alt="hipercard">
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

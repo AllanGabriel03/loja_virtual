@@ -1,0 +1,18 @@
+@import url(style_estrutura_paginas.css);
+
+#cards{
+    display: flex;
+}
+
+#formulario{
+    display: flex;
+}
+
+#formulario h2{
+    width: 500px;
+    height: 80px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2em;
+    background-color: var(--cor_lnk_menu);
+}

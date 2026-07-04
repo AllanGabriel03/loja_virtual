@@ -1,0 +1,31 @@
+@import url(style_estrutura_paginas.css);
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 50%;
+    min-height: 2px;
+    padding: 20px;
+    align-items: center;
+}
+
+#sobre h3 p {
+    text-align: justify;
+}
+
+.container__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#pesquisa h3{
+    width: 500px;
+    height: 80px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2em;
+    text-align: center;
+    background-color: var(--cor_lnk_menu);
+}
