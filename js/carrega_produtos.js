@@ -65,6 +65,14 @@ const produtosFiltrados = (idSecao) => {
     return produtos.filter(elem => elem.id_secao === idSecao);
 }
 
+const inputPesquisa = document.querySelector("#pesquisa")
+
+inputPesquisa.addEventListener('input', (evt) =>{
+    let txtInput = evt.target.values.toLowerCase()
+
+    montandoCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
+})
+
 // MONTANDO CARDS
 const montandoCards = (objProdutos) => {
     section_cards.innerHTML = '';
