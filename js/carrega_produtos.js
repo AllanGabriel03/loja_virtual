@@ -1,6 +1,8 @@
 // IMPORTANDO O ARRAY DOS PRODUTOS
 import { produtos } from "./produtos.js";
 
+import { addItem, carrinho } from "./carrinho.js";
+
 // PEGANDO ELEMENTO DO DOM
 const section_cards = document.querySelector('#cards');
 
@@ -97,6 +99,12 @@ const montandoCards = (objProdutos) => {
         const btnCard = document.createElement('button');
         btnCard.setAttribute('class', 'btn_card');
         btnCard.innerHTML = 'Adicionar';
+
+        btnCard.addEventListener('click', () => {
+            addItem(elem)
+            
+            window.location.href = "/paginas/carrinho.html";
+        });
 
         divCard.appendChild(imgProduto);
         divCard.appendChild(h2Titulo);
