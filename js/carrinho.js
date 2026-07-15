@@ -3,26 +3,21 @@ const itensCarrinho = JSON.parse(localStorage.getItem('itensSessão')) || []
 const addItem = (objItem)=>{
     itensCarrinho.push(objItem)
 
-    localStorage.setItem('itensSessao', itensCarrinho)
+    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
 }
 
 const listItens = ()=>{
-    const itensSelecionados = JSON.stringify(localStorage.getItem('itensSessao'))
+    const itensSelecionados = JSON.parse(localStorage.getItem('itensSessao'))
 
-    return itensCarrinho
+    return itensSelecionados
 }
 
-const montaTelaCarrinho = () => {
-    const sectionItensCarrinho = document.querySelector('#itens-carrinho')
-
-    listItens().forEach((elem, i) => {
-        const sectionItem = document.createElement('section')
-    sectionItem.setAttribute('class', 'item')
-    sectionItem.innerHTML = `<img src='${elem.caminho_da_imagem}' alt=${elem.descricao_produto}/> <p class='descricao'>${elem.} </p> <p class='descricao'>`
-
-    sectionItensCarrinho.appendChild(sectionItem)
-    });
+const removeItem = (pos) => {
+    itensCarrinho.splice(pos, 1)
     
+    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
 }
 
-export{addItem}
+
+
+export{addItem, listItens, removeItem}

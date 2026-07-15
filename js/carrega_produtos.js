@@ -1,15 +1,27 @@
 // IMPORTANDO O ARRAY DOS PRODUTOS
 import { produtos } from "./produtos.js";
 
-import { addItem, carrinho } from "./carrinho.js";
+import { addItem } from "./carrinho.js";
 
 // PEGANDO ELEMENTO DO DOM
 const section_cards = document.querySelector('#cards');
 
+const carregaProduto = (id_secao) => {
+    //AO CHAMAR A FUNÇÃO carregaProduto() DEVE PASSAR O PARÂMETRO. 0(ZERO) CHAMA A FUNÇÃO listarProdutos(), QUALQUER OUTRO VALOR CHAMA A FUNLÇAO produtosFiltrados(id_secao)
+    if (id_secao === 0) {
+        montandoCards(listarProdutos())
+    } else {
+        montandoCards(produtosFiltrados(id_secao))
+    }
+
+    //QUALQUER FUNÇÃO CHAMADA SEMPRE CHAMA A FUNÇÃO montarSecoes()
+    montarSecoes()
+}
+
 // FUNÇÃO PARA CARREGAR TODOS OS PRODUTOS (Carregamento Inicial)
 const listarProdutos = () => {
     // Chama a função de montar cards passando o array completo
-    montandoCards(produtos);
+     return produtos;
 }
 
 // FILTRANDO AS SEÇÕES COM A COLEÇÃO map
@@ -38,27 +50,28 @@ const montarSecoes = () => {
 
     // Se clicar em 'Todos', renderiza o array de produtos inteiro
     aTodos.addEventListener('click', () => {
-        montandoCards(produtos); 
+        carregaProduto(0); 
     });
 
     liTodos.appendChild(aTodos);
+
     ulMenu.appendChild(liTodos);
     // ---------------------------------------------------
 
     // --- 2. PERCORRENDO E MONTANDO AS SEÇÕES DINÂMICAS ---
-    listarSecoes().forEach((elem) => {
-        const liSecao = document.createElement('li');
-        const aSecao = document.createElement('a');
-        aSecao.setAttribute('href', '#');
-        aSecao.setAttribute('class', 'lnk-secao');
-        aSecao.innerHTML = elem.nome_secao;
+    listarSecoes().forEach((elem, i) => {
+        const liTodos = document.createElement('li');
+        const aTodos = document.createElement('a');
+        aTodos.setAttribute('href', '#');
+        aTodos.setAttribute('class', 'lnk-secao');
+        aTodos.innerHTML = elem.nome_secao;
 
-        aSecao.addEventListener('click', () => {
+        aTodos.addEventListener('click', () => {
             montandoCards(produtosFiltrados(elem.id_secao));
         });
 
-        liSecao.appendChild(aSecao);
-        ulMenu.appendChild(liSecao);
+        liTodos.appendChild(aTodos);
+        ulMenu.appendChild(liTodos);
     });
 }
 
@@ -69,7 +82,7 @@ const produtosFiltrados = (idSecao) => {
 
 const inputPesquisa = document.querySelector("#pesquisa")
 
-inputPesquisa.addEventListener('input', (evt) =>{
+inputPesquisa.addEventListener('input', (evt) => {
     let txtInput = evt.target.values.toLowerCase()
 
     montandoCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
@@ -79,7 +92,7 @@ inputPesquisa.addEventListener('input', (evt) =>{
 const montandoCards = (objProdutos) => {
     section_cards.innerHTML = '';
 
-    objProdutos.forEach((elem) => {
+    objProdutos.forEach((elem, i) => {
         const divCard = document.createElement('div');
         divCard.setAttribute('class', 'card');
 
@@ -116,5 +129,4 @@ const montandoCards = (objProdutos) => {
 }
 
 // INICIANDO A APLICAÇÃO
-listarProdutos(); // Renderiza todos os produtos ao abrir a página
-montarSecoes();   // Monta o menu de navegação
+carregaProduto(0)  // Monta o menu de navegação
