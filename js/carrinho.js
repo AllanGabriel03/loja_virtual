@@ -1,7 +1,20 @@
 const itensCarrinho = JSON.parse(localStorage.getItem('itensSessão')) || []
 
-const addItem = (objItem)=>{
-    itensCarrinho.push(objItem)
+const fObjItem = (objProduto) => {
+    const item = {
+        id_produto: objProduto.id_produto, 
+        descricao_produto: objProduto.descricao_produto,
+        caminho_da_imagem: objProduto.caminho_da_imagem,
+        valor_unitario: objProduto.valor_unitario,
+        quantidade : 1
+    }
+    return item
+}
+
+console.log("Indice do array")
+
+const addItem = (objItem) => {
+    itensCarrinho.push(fObjItem(objItem))
 
     localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
 }

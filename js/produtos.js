@@ -19,7 +19,7 @@ const produtos = [
     {
       id_produto: 3,
       descricao_produto: "converse",
-      caminho_da_imagem: "..imagens/Converse.jpg",
+      caminho_da_imagem: "../imagens/Converse.jpg",
       valor_unitario: 799.90,
       id_secao: 1,
       nome_secao: "Corrida"
@@ -61,7 +61,7 @@ const produtos = [
     {
       id_produto: 8,
       descricao_produto: "Nike Mind",
-      caminho_da_imagem: "..imagens/Nike Mind.webp",
+      caminho_da_imagem: "../imagens/Nike Mind.webp",
       valor_unitario: 499.90,
       id_secao: 2,
       nome_secao: "Casual"

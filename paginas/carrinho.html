@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/style_carrinho.css">
     <link rel="shortcut icon" href="../imagens/icones/favicon.ico" type="image/x-icon">
 
-    <script src="../js/monta_tela_carrinho.js" defer></script>
+    <script type="module" src="/js/monta_tela_carrinho.js" defer></script>
 </head>
 <body>
     <main id="geral">
@@ -41,9 +41,9 @@
             <h3>Carrinho</h3>
         </section>
 
-        <section id="cards">
-
-            <div class="card">
+        <section id="carrinho">
+          <section id="itens-carrinho"></section>
+            <div class="item">
                 <img src="../imagens/adidas2.webp" alt="adidas2" class="img_card">
 
                 <h2 class="tito_card">adidas2</h2>
@@ -55,7 +55,7 @@
                 <button class="btn_card">Adicionar</button>
             </div>
 
-            <div class="card">
+            <div class="item">
                 <img src="../imagens/Balenciaga mendigo.jfif" alt="balenciaga" class="img_card">
 
                 <h2 class="tito_card">Balenciaga Mendigo</h2>
@@ -67,7 +67,7 @@
                 <button class="btn_card">Adicionar</button>
             </div>
 
-            <div class="card">
+            <div class="item">
                 <img src="../imagens/Converse.jpg" alt="converse" class="img_card">
 
                 <h2 class="tito_card">Converse</h2>
@@ -78,7 +78,7 @@
                 <button class="btn_card">Adicionar</button>
             </div>
 
-            <div class="card">
+            <div class="item">
                 <img src="../imagens/crocs.webp" alt="crocs" class="img_card">
 
                 <h2 class="tito_card">Crocs</h2>
@@ -89,7 +89,8 @@
 
                 <button class="btn_card">Adicionar</button>
             </div>
-        </section>     
+        </section>
+    </section>     
         
         <section id="formulario">
 
