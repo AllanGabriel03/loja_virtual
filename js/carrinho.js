@@ -1,4 +1,4 @@
-const itensCarrinho = JSON.parse(localStorage.getItem('itensSessão')) || []
+const itensCarrinho = JSON.parse(localStorage.getItem('itensSessao')) || []
 
 const fObjItem = (objProduto) => {
     const item = {
@@ -19,8 +19,13 @@ const addItem = (objItem) => {
     localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
 }
 
+const atualizarQuantidade = (pos, novaQuantidade) => {
+    const itens = listItens()
+    itens[pos].quantidade = novaQuantidade
+    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
+}
 const listItens = ()=>{
-    const itensSelecionados = JSON.parse(localStorage.getItem('itensSessao'))
+    const itensSelecionados = JSON.parse(localStorage.getItem('itensSessao')) || []
 
     return itensSelecionados
 }
@@ -33,4 +38,4 @@ const removeItem = (pos) => {
 
 
 
-export{addItem, listItens, removeItem}
+export{addItem, listItens, removeItem, atualizarQuantidade}

@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Virtual</title>
 
-    <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
-    <link rel="stylesheet" href="../css/style_formulario.css">
+    
     <link rel="stylesheet" href="../css/style_carrinho.css">
     <link rel="shortcut icon" href="../imagens/icones/favicon.ico" type="image/x-icon">
 
-    <script type="module" src="/js/monta_tela_carrinho.js" defer></script>
+    <script type="module" src="../js/monta_tela_carrinho.js" defer></script>
 </head>
 <body>
     <main id="geral">
@@ -42,78 +41,69 @@
         </section>
 
         <section id="carrinho">
-          <section id="itens-carrinho"></section>
-            <div class="item">
+          <section id="itens-carrinho">
+            <section class="item">
                 <img src="../imagens/adidas2.webp" alt="adidas2" class="img_card">
-
+                <p class="descricao"> adidas 2</p>
+                <p class="vlr-unitario">R$ 45.00 Kg</p>
+                <input type="number" name="quant01" id="quant01" class="input-item" value="1">
                 <h2 class="tito_card">adidas2</h2>
+                <img src="../imagens/icones/x.png" alt="" class="img-remover">
+            </section>
 
-                <h3 class="valor_card">
-                    R$100.000
-                </h3>
-
-                <button class="btn_card">Adicionar</button>
-            </div>
-
-            <div class="item">
+            <section class="item">
                 <img src="../imagens/Balenciaga mendigo.jfif" alt="balenciaga" class="img_card">
-
+                <p class="vlr-unitario">R$ 45.00 Kg</p>
                 <h2 class="tito_card">Balenciaga Mendigo</h2>
 
-                <h3 class="valor_card">
-                    R$500.000
-                </h3>
+                <input type="number" name="quant01" id="quant01" class="input-item" value="1">
+                <img src="../imagens/icones/x.png" alt="" class="img-remover">
+            </section>
 
-                <button class="btn_card">Adicionar</button>
-            </div>
-
-            <div class="item">
+            <section class="item">
                 <img src="../imagens/Converse.jpg" alt="converse" class="img_card">
-
+                <p class="vlr-unitario">R$ 45.00 Kg</p>
                 <h2 class="tito_card">Converse</h2>
-
-                <h3 class="valor_card">
-                    R$200
-                </h3>
-                <button class="btn_card">Adicionar</button>
-            </div>
-
-            <div class="item">
-                <img src="../imagens/crocs.webp" alt="crocs" class="img_card">
-
-                <h2 class="tito_card">Crocs</h2>
-
-                <h3 class="valor_card">
-                    R$10
-                </h3>
-
-                <button class="btn_card">Adicionar</button>
-            </div>
-        </section>
-    </section>     
-        
-        <section id="formulario">
-
-            <form id="form_carrinho">
-                 
-                <label for="cep">CEP</label>
-                <input type="text" name="cep" id="cep" class="input02" maxlength="9" placeholder="Digite seu CEP">
+                <input type="number" name="quant01" id="quant01" class="input-item" value="1">
                 
-                <label for="valor">Valor dos produtos</label>
-                <h2>R$200000</h2>
+                <img src="../imagens/icones/x.png" alt="" class="img-remover">
+            </section>
 
-                <label for="frete">Valor do frete</label>
-                <h2>R$50</h2>
-
-                <label for="valorTotal">Valor Total</label>
-                <h2>R$200050</h2>
-
-                <button type="menu">Continuar compra</button>
-                <button type="submit">Finalizar comprar</button>
-
-                <h3></h3>
-            </form>
+            <section class="item">
+                <img src="../imagens/crocs.webp" alt="crocs" class="img_card">
+                <p class="vlr-unitario">R$ 45.00 Kg</p>
+                <h2 class="tito_card">Crocs</h2>
+                <input type="number" name="quant01" id="quant01" class="input-item" value="1">
+                
+                <img src="../imagens/icones/x.png" alt="" class="img-remover">
+            </section>
         </section>
+         
+        
+        <div id="valores-carrinho">
+
+            <div id="div-cep">
+                <h2 class="titulo-valores-carrinho">CEP</h2>
+                <div id="input-cep"><input type="text" name="input-cep" id="input-cep" class="input-cep"></div>
+            </div>
+
+            <div id="div-calc-valor">
+                <h2 class="titulo-valores-carrinho">Valor Total</h2>
+                <p id="valor-total" class="valor">R$ 100,00</p>
+
+                <h2 class="titulo-valores-carrinho">Valor Frete</h2>
+                <p id="valor-total" class="valor">R$ 10,00</p>
+            </div>
+
+            <div id="div-calc-valor-pagar">
+                <h2 class="titulo-valores-carrinho">Total a Pagar</h2>
+                <p id="valor-Pagar" class="valor">R$ 100,00</p>
+            </div>
+
+            <button id="btn-continuar" class="btn-carrinho">Continuar Compra</button>
+            <button id="btn-finalizar" class="btn-carrinho">Finalizar Compra</button>
+        </div>
+    </section>
 
         <footer id="rodape">
             <div id="dadosLoja">

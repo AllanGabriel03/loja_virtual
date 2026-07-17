@@ -70,7 +70,7 @@ const produtos = [
     // SEÇÃO 3: Basquete
     {
       id_produto: 9,
-      descricao_produto: "tenisSalto",
+      descricao_produto: "tenis Salto",
       caminho_da_imagem: "../imagens/Salto tenis.png",
       valor_unitario: 1099.90,
       id_secao: 3,
@@ -86,7 +86,7 @@ const produtos = [
     },
     {
       id_produto: 11,
-      descricao_produto: "tenisRatos",
+      descricao_produto: "tenis Ratos",
       caminho_da_imagem: "../imagens/tenis ratos.jpg",
       valor_unitario: 999.90,
       id_secao: 3,
@@ -94,7 +94,7 @@ const produtos = [
     },
     {
       id_produto: 12,
-      descricao_produto: "tenisdCcorrida",
+      descricao_produto: "tenis de Ccorrida",
       caminho_da_imagem: "../imagens/Tênis de corrida.jfif",
       valor_unitario: 749.90,
       id_secao: 3,
@@ -112,7 +112,7 @@ const produtos = [
     },
     {
       id_produto: 14,
-      descricao_produto: "tenisTransparente",
+      descricao_produto: "tenis Transparente",
       caminho_da_imagem: "../imagens/Tênis transparente.jfif",
       valor_unitario: 399.90,
       id_secao: 4,

@@ -28,7 +28,7 @@ const listarProdutos = () => {
 const listarSecoes = () => {
     const secoesFiltrada = new Map();
 
-    produtos.forEach((elem) => {
+    produtos.forEach((elem, i) => {
         secoesFiltrada.set(elem.id_secao, elem);
     });
 
@@ -46,7 +46,7 @@ const montarSecoes = () => {
     const aTodos = document.createElement('a');
     aTodos.setAttribute('href', '#');
     aTodos.setAttribute('class', 'lnk-secao');
-    aTodos.innerHTML = 'Todos';
+    aTodos.innerHTML = 'TODOS';
 
     // Se clicar em 'Todos', renderiza o array de produtos inteiro
     aTodos.addEventListener('click', () => {
