@@ -11,10 +11,14 @@ const fObjItem = (objProduto) => {
     return item
 }
 
-console.log("Indice do array")
-
 const addItem = (objItem) => {
-    itensCarrinho.push(fObjItem(objItem))
+    const itemExistente = itensCarrinho.find(elem => elem.id_produto === objItem.id_produto)
+
+    if (itemExistente) {
+        itemExistente.quantidade += 1
+    } else {
+        itensCarrinho.push(fObjItem(objItem))
+    }
 
     localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
 }

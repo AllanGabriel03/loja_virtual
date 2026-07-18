@@ -6,6 +6,7 @@ const montaTelaCarrinho = () => {
 
   sectionItensCarrinho.innerHTML = '';
 
+  let valorTotalCarrinho = 0
   listItens().forEach((elem, i) => {
     const totalItem = elem.valor_unitario * elem.quantidade;
     valorTotalCarrinho += totalItem;
